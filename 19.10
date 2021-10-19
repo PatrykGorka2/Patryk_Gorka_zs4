@@ -23,7 +23,7 @@
 
     </script>
     -->
-
+<!---
     <script>
 const r = prompt('Podaj promien: ');
 const PI = 3.14;
@@ -33,6 +33,15 @@ const obwod = 2*PI*r;
 document.write(`<div>Pole kola wynosi: ${pole} </div>`);
 document.write(`<div>Obwod kola wynosi: ${obwod} </div>`);
 
+    </script>
+    -->
+
+    <script>
+      const trasa = prompt('Podaj ile kilomertow ma trasa: ');
+      const a = 1;
+      const pali = a * trasa;
+
+      document.write(`<div>Samochod na 100 kilomenrow pali: ${pali} </div>`);
     </script>
 </body>
 </html>
