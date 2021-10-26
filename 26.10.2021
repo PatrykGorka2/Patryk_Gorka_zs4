@@ -37,7 +37,7 @@
         } 
         
         //wyswietlamy w div wartosc Pola.
-        wynik.textContent=poleWFormularzu;
+        //wynik.textContent=poleWFormularzu;
     });
         </script>
 </body>
