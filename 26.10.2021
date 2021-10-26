@@ -1,0 +1,36 @@
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="">
+        <input type="text" name="pole">
+        <button type="sumbit">Pokaż</button>
+    </form>
+
+    <div class="wynik"></div>
+
+    <script>
+        // odwolujemy sie do formularza (pobieramy obiekt form)
+        const formularz = document.querySelector('form');
+
+        const wynik = document.querySelector('.wynik');
+        // do zdarzenia sumbit formularza przypisujemy funkcję, którą przeglądarka uruchomi w momencie pojawienia się tego zdarzenia.
+
+        formularz.addEventListener('sumbit', (e) => {
+            // zatrzymujemy domyslne dzialanie przegladarki w nawiasie
+            e.preventDefault();  //zatrzymaj
+        // odwolujemy sie do pola w formularzu
+        const poleWFormularzu =  document.querySelector('input[name="pole"]').value;
+        
+        // wyswietlamy w div wartosc pola
+        wynik.textContent = poleWFormularzu;
+        });    
+        </script>
+</body>
+</html>
