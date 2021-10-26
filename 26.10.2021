@@ -30,7 +30,12 @@
  
     const poleWFormularzu = document.querySelector('input[name=pole]').value;
  
- 
+         if(poleWFormularzu %2==0 ) {
+            wynik.textContent = 'Liczba jest parzysta'
+        } else {
+       wynik.textContent = 'Liczba jest nieparzysta';
+        } 
+        
         //wyswietlamy w div wartosc Pola.
         wynik.textContent=poleWFormularzu;
     });
