@@ -1,36 +1,39 @@
-
-   <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <form action="">
+    <form action="">
         <input type="text" name="pole">
-        <button type="sumbit">Pokaż</button>
-    </form>
-
-    <div class="wynik"></div>
-
-    <script>
-        // odwolujemy sie do formularza (pobieramy obiekt form)
-        const formularz = document.querySelector('form');
-
-        const wynik = document.querySelector('.wynik');
-        // do zdarzenia sumbit formularza przypisujemy funkcję, którą przeglądarka uruchomi w momencie pojawienia się tego zdarzenia.
-
-        formularz.addEventListener('sumbit', (e) => {
-            // zatrzymujemy domyslne dzialanie przegladarki w nawiasie
-            e.preventDefault();  //zatrzymaj
-        // odwolujemy sie do pola w formularzu
-        const poleWFormularzu =  document.querySelector('input[name="pole"]').value;
-        
-        // wyswietlamy w div wartosc pola
-        wynik.textContent = poleWFormularzu;
-        });    
+        <button type="submit">Pokaż </button>
+        </form>
+<div class="wynik"> wynik</div>
+        <script> 
+        //odwolujemy sie do formularza (pobieramy obiekt)
+ 
+    const formularz = document.querySelector('form');
+    //do zdarzenia submit przypisujemy funkcje, ktora przegladarka uruchomi w momencie pojawienia sie tego zdarzenia.
+ 
+    //pobieramy DIVA wynik
+ 
+    const wynik=document.querySelector('.wynik');
+ 
+    formularz.addEventListener('submit', (e) => {
+    //zatrzymujemy domyslne dzialanie przegladarki
+    e.preventDefault();
+    //odwolujemy sie do pola w formularzu.
+ 
+    const poleWFormularzu = document.querySelector('input[name=pole]').value;
+ 
+ 
+        //wyswietlamy w div wartosc Pola.
+        wynik.textContent=poleWFormularzu;
+    });
         </script>
 </body>
 </html>
