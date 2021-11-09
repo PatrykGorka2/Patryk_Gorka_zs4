@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" method="GET">
+        <input type="number" name="liczba1" placeholder="Podaj poczaek przedziału">
+        <input type="number" name="liczba2" placeholder="Ilość liczb">
+        <button type="submit">Oblicz</button>
+    </form>
+
+    <div class="srednia"></div>
+
+
+    <script>
+        const form = document.querySelector('form');
+        const div = document.querySelector('.srednia')
+        form.addEventListener('submit' , (e)=>{
+            e.preventDefault();
+            const poczatek = parseInt(document.querySelector('input[name = liczba1]').value); //konwersa jawna
+            const iloscLiczb = document.querySelector('input[name = liczba2]').value;
+            iloscLiczb * 1; //konwesja nie jawna
+            let suma = 0;
+
+            for(let i = poczatek ; i <= poczatek+iloscLiczb ; i++)
+            {
+                suma += i;
+            }
+
+            div.textContent = `Srednia ${iloscLiczb} liczb zaczynajac od ${poczatek} jest równa ${(suma / iloscLiczb).toFixed(2)}`;
+        });
+    </script>
+
+</body>
+</html>
