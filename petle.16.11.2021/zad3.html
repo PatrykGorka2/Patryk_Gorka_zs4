@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="GET">
+        <input type="number" name="liczba1" placeholder="liczba1"/>
+        <input type="number" name="liczba2" placeholder="liczba2"/>
+        <button type="submit">Oblicz NWD</button>
+    </form>
+
+    <div class="wynik"></div>
+
+    <script>
+        const form = document.querySelector('form');
+        const div = document.querySelector('.wynik');
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            let liczba1 = document.querySelector('input[name="liczba1"]').value * 1;
+            let liczba2 = document.querySelector('input[name="liczba2"]').value * 1;
+
+            while(liczba1 != liczba2){
+                if(liczba1 > liczba2){
+                    liczba1 = liczba1 - liczba2;
+                }
+                else{
+                    liczba2 = liczba2 - liczba1;
+                }
+            }
+            div.textContent = `NWD wynosi: ${liczba1}`;
+        });
+        
+    </script>
+
+
+    
+</body>
+</html>
