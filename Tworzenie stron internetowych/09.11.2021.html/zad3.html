@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" methd="GET">
+        <input type="number" name="liczba1" placeholder="Podaj poczatek przedzialu">
+        <input type="number" name="liczba2" placeholder="Ilosc liczb">
+        <button type="submit">Oblicz</button>
+    </form>
+
+    <div class="srednia"></div>
+        <script>
+var a = prompt("podaj a");
+        var b = prompt("podaj b");
+        var pom = 0;
+        
+       while (a != b) {
+         if (a < b) {
+           pom = a; a = b; b = pom;
+         }
+         a = a - b;
+       }
+       document.write("najwiekszywspolnydzielnik: "+a);
+        </script>
+    
+</body>
+</html>
