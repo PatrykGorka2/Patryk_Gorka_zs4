@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" method="POST">
+        <input type="number" name="liczba1" placeholder="1 Liczba">
+        <input type="number" name="liczba2" placeholder="2 Liczba">
+        <input type="number" name="wybor" placeholder="RODZAJ DZIALANIA 1/2/3/4">
+        <input type="submit" value="WYKONAJ">
+    </form>
+        <div class="temp">
+            <p>
+                1. Dodawanie
+                2. Odejmowane
+                3. Mnożenie
+                4. Dzielenie 
+            </p>
+        </div>
+        <div class="wynik"></div>
+
+    <script>
+        const formularz = document.querySelector('form');
+        const div = document.querySelector('.wynik');
+        let wynik = 0;
+
+        function dodawanie(liczba1, liczba2)
+        {
+            return liczba1 + liczba2;
+        }
+
+        function odejmowanie(liczba1, liczba2)
+        {
+            return liczba1 - liczba2;
+        }
+
+        function dzielenie(liczba1, liczba2)
+        {
+            return liczba1 / liczba2;
+        }
+
+        function mnozenie(liczba1, liczba2)
+        {
+            return liczba1 * liczba2;
+        }
+
+        
+
+        formularz.addEventListener('submit' , (e)=>{
+            e.preventDefault();
+
+            const l1 = parseInt(document.querySelector('input[name="liczba1"]').value); 
+            const l2 = parseInt(document.querySelector('input[name="liczba2"]').value);
+            const wybor = parseInt(document.querySelector('input[name="wybor"]').value);
+
+            switch(wybor)
+            {
+                case 1:{
+                    wynik = dodawanie(l1,l2);
+                    div.textContent = wynik;
+                    break;
+                }
+                case 2:{
+                    wynik = odejmowanie(l1,l2);
+                    div.textContent = wynik;
+                    break;
+                }
+                case 3:{
+                    wynik = mnozenie(l1,l2);
+                    div.textContent = wynik;
+                    break;
+                }
+                case 4:{
+                    wynik = dzielenie(l1,l2);
+                    div.textContent = wynik;
+                    break;
+                }
+            }
+
+        });
+        
+    </script>
+    
+</body>
+</html>
