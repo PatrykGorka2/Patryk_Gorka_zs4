@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="GET">
+        <input type="number" name="liczba2" placeholder="Podaj liczbe 2"/>
+        <button type="submit">Oblicz</button>
+    </form>
+    <div></div>
+
+    <script>
+        // Napisz program który policzy, ile liczb parzystych i nieparzystych jest w ciągu liczb w zakresie od 1 do n (n podaje użytkownik).
+        const form = document.querySelector('form');
+        const div = document.querySelector('div');
+
+        let liczbaParzysta = 0, liczbaNieparzysta = 0;
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const iloscLiczb = parseInt(document.querySelector('input[name ="liczba2"]').value);
+
+            for (let i = 1; i <= iloscLiczb; i++){
+                if(i%2 == 0){
+liczbaParzysta++;
+                }
+                else{
+liczbaNieparzysta++;
+                }
+            }
+            div.textContent = `Przedzial od 1 do ${iloscLiczb} zawiera ${liczbaParzysta} liczb parzystych i ${liczbaNieparzysta} liczb nieparzystych`;
+        });
+    </script>
+</body>
+</html>
+
