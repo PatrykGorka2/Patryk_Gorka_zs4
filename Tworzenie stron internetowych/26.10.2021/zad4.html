@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="pole1" placeholder="Podaj liczbe poczatkowa: ">
+        <input type="text" name="pole2" placeholder="Podaj liczbe koncowa: ">
+        <input type="text" name="pole3" placeholder="Liczba: ">
+        <button type="submit">Pokaż</button>
+    </form>
+
+    <div class="wynik"></div>
+        <script>
+            const formularz = document.querySelector('form');
+            const wynik = document.querySelector('.wynik');
+            formularz.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+
+                const a = document.querySelector('input[name=pole1]').value;
+                const b = document.querySelector('input[name=pole2]').value;
+                const cyfra = document.querySelector('input[name=pole3]').value;
+
+                if(cyfra >=a && cyfra <=b )
+                {
+                    wynik.textContent = 'Liczba spełnia warunek ' ;
+                }
+
+        else
+        {
+            wynik.textContent = 'Liczba niespełnia warunku ' ;
+        }
+            });
+        </script>
+    
+</body>
+</html>
