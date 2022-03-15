@@ -4,35 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Przykłady programowania obiektowego w JS</title>
 </head>
 <body>
-<!--
+
+    <div>
+
+
+    </div>
+
+    <script src="Samochod.js"></script>
+    <script src="Komis.js"></script>
     <script>
-         ZADANIE 1
-        
-        const liczba1 = prompt('Podaj pierwszą liczbę: ');
-        const liczba2 = prompt('Podaj drugą liczbę: ');
-        const liczba3 = prompt('Podaj trzecią liczbę: ');
+        //tutaj będziemy pisać kod obsługi klasy Samochod
+        const audi = new Samochod('Audi', 'A3', 12000, 2003, 15);
+        //console.log(audi);
+        //console.log(audi.wiek());
+        //console.log(audi.koszt());
 
-        document.write(' <div>Podane liczby to: </div> ');
-        // document.write(' <div> liczba 1 = ' + liczba1 + ', liczba 2 = ' + liczba2 + ', liczba 3 = ' + liczba3 + ' </div> ');
+        const kia = new Samochod('KIA', 'Ceed', 18000, 2010, 8);
+        //console.log(kia);
+        //console.log(kia.wiek());
+        //console.log(kia.koszt());
 
-        document.write(`<div> liczba 1 = ${liczba1}, liczba 2 = ${liczba2}, liczba 3 = ${liczba3}</div>`);
-    
+        const opel = new Samochod('Opel', 'Astra', 5000, 2004, 10);
+        //console.log(opel);
+        //console.log(opel.wiek());
+        //console.log(opel.koszt());
 
-    </script>
-    -->
 
-    <script>
-const r = prompt('Podaj promien: ');
-const PI = 3.14;
-const pole = PI *r*r;
-const obwod = 2*PI*r;
+        //tworzymy obiekt w oparciu o klase komis
+        const asso  = new Komis('asso');
+        console.log(asso);
+        asso.dodajSamochod(kia);
+        console.log(asso);
+        asso.dodajSamochod(audi);
 
-document.write(`<div>Pole kola wynosi: ${pole} </div>`);
-document.write(`<div>Obwod kola wynosi: ${obwod} </div>`);
+        const fordzik = new Samochod('Ford', 'Fusion', 20000, 2012, 7);
+        asso.dodajSamochod(fordzik);
 
+        asso.wyswietlSamochody();
     </script>
 </body>
 </html>
