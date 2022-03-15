@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przykłady programowania obiektowego w JS</title>
+</head>
+<body>
+
+    <div>
+
+
+    </div>
+
+    <script src="Samochod.js"></script>
+    <script src="Komis.js"></script>
+    <script>
+        //tutaj będziemy pisać kod obsługi klasy Samochod
+        const audi = new Samochod('Audi', 'A3', 12000, 2003, 15);
+        //console.log(audi);
+        //console.log(audi.wiek());
+        //console.log(audi.koszt());
+
+        const kia = new Samochod('KIA', 'Ceed', 18000, 2010, 8);
+        //console.log(kia);
+        //console.log(kia.wiek());
+        //console.log(kia.koszt());
+
+        const opel = new Samochod('Opel', 'Astra', 5000, 2004, 10);
+        //console.log(opel);
+        //console.log(opel.wiek());
+        //console.log(opel.koszt());
+
+
+        //tworzymy obiekt w oparciu o klase komis
+        const asso  = new Komis('asso');
+        console.log(asso);
+        asso.dodajSamochod(kia);
+        console.log(asso);
+        asso.dodajSamochod(audi);
+
+        const fordzik = new Samochod('Ford', 'Fusion', 20000, 2012, 7);
+        asso.dodajSamochod(fordzik);
+
+        asso.wyswietlSamochody();
+    </script>
+</body>
+</html>
