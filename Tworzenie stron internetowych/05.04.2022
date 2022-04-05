@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+        padding: 50px;
+        color: white;
+        background-color: black
+        ;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Stara tresc!!!!
+    </div>
+
+    <script>
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+        //pobieramy diva
+        const obiektDiv = document.querySelector('div');
+        const colors = ['red', 'green', 'brown', 'yellow', 'orange'];
+
+        //przypisujemy obsluge zdarzenia klikniecia mysza
+        obiektDiv.addEventListener('click', function(){
+
+            //zmiana koloru czcionki
+            let los = getRandomInt(0, 4);
+            obiektDiv.style.color=colors[los];
+        });
+
+        //przypisujemy zdarzenie najechanie kursorem myszy
+
+        obiektDiv.addEventListener('mouseover', function(){
+            obiektDiv.textContent = 'Nowa treść!!!!';
+        });
+
+        //przypisujemy kolejne zdarzenie
+        
+
+        obiektDiv.addEventListener('mouseout', function(){
+            obiektDiv.textContent = 'Stara tresc!!!!';
+        });
+    </script>
+</body>
+</html>
