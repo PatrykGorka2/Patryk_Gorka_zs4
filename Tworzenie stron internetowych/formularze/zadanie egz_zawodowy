@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+
+        span.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+       
+        <div><label>Wpisz kolor czerwony: </label>
+            <input type="number" name="red" /></div>
+            <span class="error"></span>
+        <div><label>Wpisz kolor zielony: </label>
+            <input type="number" name="green" /></div>
+            <span class="error"></span>
+        <div><label>Wpisz kolor niebieski: </label>
+            <input type="number" name="blue" /></div>
+            <span class="error"></span>
+            <div><input type="submit" value="Zmien kolor tla"></div>
+            
+        
+    </form>
+    <script>
+        //pobieramy formularz
+        const formularz = document.querySelector('form');
+
+        //pobieramy elementy formularza
+        const czerwony = document.querySelector('input[name="red"]');
+        const zielony = document.querySelector('input[name="green"]');
+        const niebieski = document.querySelector('input[name="blue"]');
+
+        //pobieramy elementy, w ktorych bedziemy umieszczac info o bledach
+        const bledy = document.querySelectorAll('span.error');
+
+        // obslugujemy zdarzenie submit (potwierdzenie wysylania) formularza
+        formularz.addEventListener('submit', function(e){
+            //po kliknieciu w przycisk submit wykona sie kod
+
+            e.preventDefault();
+            // pobieramy wartosci pol wpisane przez uzytkownika
+            const red = czerwony.value;
+            const green = zielony.value;
+            const blue = niebieski.value;
+
+            //czyszczenie zawartosci elementow span
+            bledy.forEach(blad=>{
+                blad.textContent= '';
+            });
+
+            //walidacja pol
+            if(red == ''){
+                bledy[0].textContent = "Nie moze byc tutaj pusto";
+            }
+            if(red < 0 || red > 255){
+                bledy[0].textContent = "Wpisana liczba musi zawierac liczby w przedziale 0-255";
+            return false;
+        }
+
+
+        if(green == ''){
+                bledy[1].textContent = "Nie moze byc tutaj pusto";
+            }
+            if(green < 0 || green > 255){
+                bledy[1].textContent = "Wpisana liczba musi zawierac liczby w przedziale 0-255";
+                return false;
+            }
+            
+
+            if(blue == ''){
+                bledy[2].textContent = "Nie moze byc tutaj pusto";
+            }
+            if(blue < 0 || blue > 255){
+                bledy[2].textContent = "Wpisana liczba musi zawierac liczby w przedziale 0-255";
+                return false;
+            }
+
+            //zmieniamy kolor tla na podany kolor
+            //odwolujemy sie do znacznika <body> i zmieniamy kolor tla
+            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        });
+    </script>
+</body>
+</html>
