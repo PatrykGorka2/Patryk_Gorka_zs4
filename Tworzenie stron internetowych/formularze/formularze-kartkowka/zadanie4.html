@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <form>
+        <label>kwadrat</label><input type="checkbox" name="kwadrat" placeholder="kwadrat">
+        <label>prostakat</label><input type="checkbox" name="prostakat" placeholder="prostakat">
+        <label>kolo</label><input type="checkbox" name="kolo" placeholder="kolo">
+
+        <input type="number" name="liczba1" placeholder="liczba1">
+        <input type="number" name="liczba2" placeholder="liczba2">
+        <input type="number" name="wynik" placeholder="wynik">
+        <input type="number" name="wynik2" placeholder="wynik2">
+
+        
+        
+        <button type="submit">Wykonaj</button>
+
+    </form>
+<div class="odpowiedz"></div>
+    <script>
+formularz= document.querySelector('form');
+
+formularz.addEventListener('submit', (e) => {
+            e.preventDefault();
+const input1 = document.querySelector('input[name="kwadrat"]');
+const input2 = document.querySelector('input[name="prostakat"]');
+const input3 = document.querySelector('input[name="kolo"]');
+
+const div = document.querySelector('.odpowiedz');
+const l1 = 6;
+const l2 = 8;
+const wynik = document.querySelector('input[name="wynik"]');
+const wynik2 = document.querySelector('input[name="wynik2"]');
+
+const promien = 4;
+const Pi = 4.14;
+
+if(input1.checked){
+
+const wynik = l1*l1;
+const wynik2 = l1+l1+l1+l1;
+div.textContent = `Pole kwadratu wynosi: ${wynik}, a obwod wynosi: ${wynik2}.`;
+
+}
+
+if(input2.checked){
+
+const wynik = l1*l2;
+const wynik2 = l1+l1+l2+l2;
+div.textContent = `Pole prostakata wynosi: ${wynik}, a obwod wynosi: ${wynik2}.`;
+
+}
+
+if(input3.checked){
+
+const wynik = Pi*promien*promien;
+const wynik2 = 2*Pi*promien;
+div.textContent = `Pole kola wynosi: ${wynik}, a obwod wynosi: ${wynik2}.`;
+
+}
+        });
+    </script>
+</body>
+</html>
