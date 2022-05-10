@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label>A</label>
+            <input type="checkbox" name="A" value="A">
+        </div>
+        <div>
+            <label>B</label>
+            <input type="checkbox" name="B" value="B">
+        </div>
+        <div>
+            <label>C</label>
+            <input type="checkbox" name="C" value="C">
+        </div>
+        <div>
+            <label>D</label>
+            <input type="checkbox" name="D" value="D">
+        </div>
+        <div>
+            <button type="submit">ODPOWIEDŹ</button>
+        </div>
+    </form>
+    <div class="odpowiedz"></div>
+    <script>
+        const formularz = document.querySelector('form');
+        const divv = document.querySelectorAll('div');
+
+        formularz.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const input = document.querySelectorAll('input[type="checkbox"]');
+            const divvv = document.querySelector('.odpowiedz');
+
+            let odpowiedz= "";
+            input.forEach(i =>{
+                if(i.checked){
+                    odpowiedz += i.value + ", ";
+                }
+            })
+            divvv.textContent = "Twoje wybory to: " +odpowiedz + ". ";
+        });
+    </script>
+</body>
+</html>
