@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <input name="slowo" placeholder="Podaj litere ktora chcesz sprawdzic">
+    <input name="zdanie" placeholder="Podaj slowo albo zdanie">
+
+    <button type="submit">Sprawdz</button>
+  
+        
+    <div></div>
+
+
+    <script>
+
+const slowo = document.querySelector('input[name="slowo"]').value;
+        const sprawdzZdanie = function(w){
+            let a = 0;
+            for(let a1 = 0;a1<w.length;a1++){
+                switch(w.charAt(a1)){
+                    case 'a':
+                    a++;
+                    break;
+
+                }
+            }
+            return a;
+        
+
+        
+            let b = 0;
+            for(let b1 = 0;b1<w.length;b1++){
+                switch(w.charAt(b1)){
+                    case 'b':
+                    b++;
+                    break;
+
+                }
+            }
+            return b;
+
+            let c = 0;
+            for(let c1 = 0;c1<w.length;c1++){
+                switch(w.charAt(c1)){
+                    case 'c':
+                    c++;
+                    break;
+
+                }
+            }
+            return c;
+
+    }
+
+        const btn = document.querySelector('button');
+        const div = document.querySelector('div')
+        btn.addEventListener('click', () =>{
+            const zdanie = document.querySelector('input[name="zdanie"]').value;
+            const slowo = document.querySelector('input[name="slowo"]').value;
+            div.textContent = `W tym wyrazie jest ${sprawdzZdanie(zdanie)} liter ${slowo}.`;
+        })
+    </script>
+</body>
+</html>
