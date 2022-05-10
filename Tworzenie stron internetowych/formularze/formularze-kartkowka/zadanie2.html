@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label>Podaj tekst</label>
+            <input type="text" name="text">
+        </div>
+        <div>
+            <button type="submit">LET'S GO</button>
+        </div>
+    </form>
+    <div class="odpowiedz"></div>
+    <script>
+        const formularz = document.querySelector('form');
+        
+        formularz.addEventListener('submit', (e) =>{
+            e.preventDefault();
+            
+            var input = document.querySelectorAll('input[type = "text"]');
+            var divv = document.querySelector('.odpowiedz');
+
+    var odpowiedz = "" +input;
+
+
+            divv.textContent = "Zdanie to: " +odpowiedz;
+        });
+    </script>
+</body>
+</html>
