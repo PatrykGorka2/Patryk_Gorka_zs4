@@ -10,8 +10,10 @@
 
         <script>
             const title = document.querySelector('title');
-            variable  = Date();
-            title.textContent = `TIME: ${variable}`;
+
+            var Time = new Date();
+            Time .setTime(Time.getTime());
+            title.textContent = `TIME: ${Time}`;
     
         </script>
 </head>
