@@ -1,0 +1,10 @@
+body{
+    background-color: orange;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0;
+
+}
