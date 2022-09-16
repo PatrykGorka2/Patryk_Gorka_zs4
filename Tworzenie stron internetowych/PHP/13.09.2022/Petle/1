@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <?php 
+    $wysokosc_ramki = 5;
+    $szerokosc_ramki = 5;
+    for($i = 1; $i <= $wysokosc_ramki; $i++){
+        $wypisz = "";
+        echo "<div>";
+        for($j = 1; $j <= $szerokosc_ramki; $j++){
+            if($j == 1 || $j == $szerokosc_ramki || $i == 1 || $i == $wysokosc_ramki){
+                $wypisz =$wypisz . '*';
+                //echo '*';
+            }else{
+                $wypisz =$wypisz . '  ';
+                //echo ' '; 
+            }
+        }
+        echo $wypisz . "</div>";
+    }
+
+    
+    ?>
+</body>
+</html>
