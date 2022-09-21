@@ -1,0 +1,24 @@
+body{
+    padding: 10px;
+}
+
+.rodzic{
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 14, 183);
+    z-index: -1;
+}
+
+.dziecko{
+    background-color: yellow;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 50px;
+
+}
