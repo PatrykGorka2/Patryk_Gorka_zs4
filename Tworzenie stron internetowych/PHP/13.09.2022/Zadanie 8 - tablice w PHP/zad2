@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- <?php
+    for($i = 0; $i<10; $i++){
+    $tablica = array($i);
+    echo $tablica[0];   
+    }
+
+    echo("<br><br>");
+
+    ?> -->
+
+<form method="post">
+    <input type="number" name="liczba1" placeholder="Podaj ilosc liczb">    
+    <button type="submit">DAWAJ OBLICZ</button>
+</form>
+
+    <?php
+
+    if(isset($_POST['liczba1'])){
+        $l1 = $_POST['liczba1'];
+        $tab = [];
+        for($i = 0; $i < $l1;$i++){
+            array_push($tab,rand(1,100));
+        }
+        echo implode(', ', $tab);
+    
+    
+    }
+    
+    
+    ?>
+
+</body>
+</html>
