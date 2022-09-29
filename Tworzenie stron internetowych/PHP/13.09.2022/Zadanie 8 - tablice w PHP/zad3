@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form method="post">
+    <input type="number" name="ilosc_liczb" placeholder="podaj ilosc liczb">
+    <input type="number" name="liczba2" placeholder="od">
+    <input type="number" name="liczba3" placeholder="do">
+
+
+    <input type="submit" value="oblicz">
+    </form>
+
+
+    
+    <?php
+
+    //Napisz program wczytujący do tablicy 10 liczb i wyświetlający te liczby od najmniejszej do największej.
+/*
+    for($i=0; $i<10;$i++){
+        $tablica = array($i);
+
+        echo $i;
+    }
+
+*/
+
+    //Napisz program zapełniający tablicę losowymi liczbami (z zakresu 1-100). Ilość liczb podaje użytkownik. 
+    //Program ma znaleźć największą spośród podanych liczb oraz wydrukować na ekranie informację mówiącą o tym, 
+    //ile razy ta liczba wystąpiła w podanym ciągu liczb.
+/*
+    <form method="post">
+    <input type="number" name="liczba1" placeholder="podaj ilosc">
+
+
+    <input type="submit" value="oblicz">
+    </form>
+*/
+ /*   if(isset($_POST['liczba1'])){
+        $l1=$_POST['liczba1'];
+
+        $tablica = [];
+
+        for( $i=0; $i<$l1; $i++){
+            array_push($tablica, rand(1,100));
+            
+        }
+
+        echo implode(',',$tablica);
+    }
+
+*/
+
+
+    //Napisz program zapełniający tablicę losowymi liczbami. Ilość liczb podaje użytkownik. 
+    //Następnie każdą liczbę należy podnieść do potęgi drugiej i wyświetlić zawartość tablicy na ekranie.
+
+    if(isset($_POST['ilosc_liczb'])){
+        $ilosc_liczb=$_POST['ilosc_liczb'];
+        $liczba2=$_POST['liczba2'];
+        $liczba3=$_POST['liczba3'];
+        $tablica=[$tab];
+    
+        for ($i=0; $i<$ilosc_liczb; $i++){
+            array_push ($tablica, pow(rand($liczba2, $liczba3),2 ));
+            
+            
+
+            
+         }
+         echo implode (' ', $tablica);
+         
+    }
+
+
+
+
+    ?>
+</body>
+</html>
