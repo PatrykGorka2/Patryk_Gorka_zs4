@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<?php
+
+$dzien=array('Monday' => 'Poniedziałek', 'Tuesday' => 'Wtorek', 'Wednesday' => 'Środa', 'Thursday' => 'Czwartek', 'Friday' => 'Piątek', 'Saturday' => 'Sobota', 'Sunday' => 'Niedziela');
+$miesiac=array('Sep' => 'Wrzesień');   
+$godzina = date("G:i");
+$dtyg = date("F");
+$ntyg = date("l");
+$nmiesiaca = date("M");
+$dmiesiaca = date("j");
+    echo $dmiesiaca;
+    echo ' ';
+    echo $miesiac[$nmiesiaca];
+    echo ' ';
+    $data = new DateTime();
+    echo $data ->format('Y');
+    echo ' ';
+    echo $dzien[$ntyg];
+    echo ' <br>';
+    echo 'Godzina: ';
+    echo $godzina;
+    echo ' ';
+    ?>
+    </body>
+    </html>
