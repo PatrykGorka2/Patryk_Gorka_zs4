@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<?php
+    
+    $teraz = new DateTime;
+    echo $teraz->format('Y-m-d');
+    echo '<br>';
+    $koniec = new DateTime(date('2023-06-22'));
+    echo $koniec->format('Y-m-d');
+
+    $roznica = $teraz -> diff($koniec);
+    echo '<br>';
+    echo $roznica->format('Do wakacji zostało: %Y lat %M miesięcy i %D dni');
+
+    ?>
+    </body>
+    </html>
