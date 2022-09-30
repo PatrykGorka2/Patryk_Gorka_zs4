@@ -32,9 +32,10 @@
         }
         $i++;
          
-         echo implode (' ', $tablica);
-         echo '<br>';
-         echo "suma to: ". "$suma";
+        echo "Suma $ilosc_liczb liczb dodatnich z przedziału od: $liczba1 do: $liczba2 to:";
+        echo '<br>';
+         echo implode ('+', $tablica );
+         echo " = ". "$suma";
 
          
     }
