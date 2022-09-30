@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <input type="number" name="ilosc_liczb" placeholder="Ilość liczb:">
+        <input type="number" name="liczba1" placeholder="Liczba 1 z przedziału:">
+        <input type="number" name="liczba2" placeholder="Liczba 2 z przedziału:">
+
+        <button type="submit">OBLICZ</button>
+    </form>
+    <?php
+    /*
+    $data = new DateTime();
+    echo $data->format('Y m d H:i:s');
+*/
+    if(isset($_POST['ilosc_liczb'])){
+        $ilosc_liczb = $_POST['ilosc_liczb'];
+        $liczba1 = $_POST['liczba1'];
+        $liczba2 = $_POST['liczba2'];
+        $tablica = [];
+        $suma = 0;
+
+        for ($i=0; $i<$ilosc_liczb; $i++){
+            array_push ($tablica, rand($liczba1, $liczba2 ));
+            $suma += $tablica[$i];
+        }
+        $i++;
+         
+         echo implode (' ', $tablica);
+         echo '<br>';
+         echo "suma to: ". "$suma";
+
+         
+    }
+
+    ?>
+    </body>
+    </html>
