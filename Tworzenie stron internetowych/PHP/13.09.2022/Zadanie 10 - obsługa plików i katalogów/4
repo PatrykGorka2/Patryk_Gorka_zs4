@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+        display:block;
+        margin: 20px;
+    }
+
+    .button{
+        height: 20px;
+    }
+    .opinia{
+        height: 100px;
+    }
+    </style>
+</head>
+<body>
+    <form action="" method="POST">
+    <input type="text" name="opinia" id="" class="opinia">
+    <input type="submit" value="Przeslij" class="button">
+    </form>
+
+    <?php
+    if(isset($_POST['opinia'])){
+        $opinia = $_POST['opinia'].PHP_EOL;
+        $plikOpinie = './opinie.txt';
+        file_put_contents('opinie.txt', $opinia."\n", FILE_APPEND | LOCK_EX);
+
+        $tab = explode(PHP_EOL, file_get_contents($plikOpinie));
+
+        foreach($tab as $t){
+            echo "<p>$t</p>";
+        }
+    }
+    ?>
+</body>
+</html>
