@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php
+    $katalog = './KATALOG';
+    if($deskr = opendir($katalog)){
+        while(($plik = readdir($deskr)) !== false)
+        echo "$plik<br/>";
+        closedir($deskr);
+    }
+    else{
+        echo "Nie mozna otworzyc katalogu";
+    }
+
+    ?>
 </body>
 </html>
