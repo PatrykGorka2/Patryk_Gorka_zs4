@@ -1,5 +1,12 @@
 <?php
-session_start()
+session_start();
+
+//zabezpieczenie aby niezalogowany uzytkownik nie miał dostępu do serwisu
+if(!isset($_SESSION['zalogowany']) || $_SESSION['zalogowany'] == false){
+    header('Location: loguj.php');
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
