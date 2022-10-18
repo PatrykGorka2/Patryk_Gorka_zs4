@@ -24,6 +24,7 @@ session_start()
         }
         else{
             $_SESSION['login_uzytkownika'] = $_POST['login'];
+            $_SESSION['zalogowany'] = true;
             header('Location: index.php');
         }
     }
