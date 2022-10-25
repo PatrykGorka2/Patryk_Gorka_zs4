@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        h1{
+            font-size: 40px;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        h1:hover{
+            font-size: 40px;
+            text-align: center;
+            background-color: aqua;
+            color: black;
+            border: 3px solid black;
+        }
+
+        input{
+            height: 30px;
+            width: 200px;
+        }
+
+        button{
+            height: 30px;
+            margin: 20px;
+        }
+
+        p{
+            font-size:20px;
+            text-transform: uppercase;
+            text-decoration: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <!--ZADANIE 4-->
+    <?php
+    echo '<h1>ZADANIE 4</h1>';
+    $dnitygodniaNiemiecki = array('Poniedzialek' => 'Montag', 'Wtorek' => 'Dienstag', 'Sroda' => 'Mittwoch', 'Czwartek' => 'Donnestag', 'Piatek' => 'Freitag', 'Sobota' => 'Samstag', 'Niedziela' => 'Sonntag');
+    $dnitygodniaAngielski = array('Poniedzialek' => 'Monday', 'Wtorek' => 'Tuesday', 'Sroda' => 'Wendesday', 'Czwartek' => 'Thursday', 'Piatek' => 'Friday', 'Sobota' => 'Saturday', 'Niedziela' => 'Sunday');
+
+    foreach($dnitygodniaNiemiecki as $klucz=>$wartosc){
+        echo $klucz. " to ". $wartosc. "<br>";
+    }
+    echo "<br>";
+    echo "<br>";
+    foreach($dnitygodniaAngielski as $klucz=>$wartosc){
+        echo $klucz. " to ". $wartosc. "<br>";
+    }
+        echo "<br>";
+        echo "<br>";
+    ?>
+    <!--ZADANIE 6-->
+    <h1>ZADANIE 6</h1>
+    <form method="post"action="">
+        <input type="number" name="liczba1" placeholder="Jaka liczbe chcesz sprawdzic">
+        <button type="submit">OBLICZ</button>
+    </form>
+
+    <?php
+    if(isset($_POST['liczba1'])){
+        $l1 = $_POST['liczba1'];
+        $tab = [];
+    }
+
+    $plik1 = fopen("plik1.txt", "w");
+    $file = "plik1.txt";
+    for($i = 0; $i<1000; $i++){
+        fwrite ($plik1, rand(0, 9));
+    }
+    ?>
+
+
+    <!--ZADANIE 7-->
+    <h1>ZADANIE 7</h1>
+    <form method="post" action="">
+    <input type="decimals" name="wzrost" placeholder="Podaj swoj wzrost w metrach">
+    <input type="decimals" name="waga" placeholder="Podaj swoja mase w kg">
+    <button type="submit">OBLICZ</button>
+</form>
+    <?php
+    if(isset($_POST['wzrost'])){
+        $wzrost = $_POST['wzrost'];
+        $waga = $_POST['waga'];
+
+        $bmi = $waga/pow($wzrost, 2);
+
+        if($bmi<18.5){
+            echo '<br>';
+            echo '<p>niedowaga</p>';
+        }
+        elseif($bmi>18.5 && $bmi<24.99){
+            echo '<p>wartosc prawidlowa</p>';
+        }
+        else{
+            echo '<p>nadwaga</p>';
+        }
+        
+    }?>
+    <!--ZADANIE 7-->
+</body>
+</html>
