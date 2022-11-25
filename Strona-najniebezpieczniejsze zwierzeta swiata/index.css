@@ -1,0 +1,719 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.menu{
+background-color: rgb(255, 247, 0);
+width: 100%;
+height: 100px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+
+.main-menu{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+list-style: none;
+padding: 0 20px;
+}
+
+.main-menu > li > a{
+text-decoration: none;
+display: block;
+text-transform: uppercase;
+font-size: 20px;
+color: black;
+margin-left: 30px;
+padding: 10px;
+}
+
+.main-menu > li > a:hover{
+color: whitesmoke;
+background-color: black;
+border-radius: 25px;
+transition: 0.6s;
+text-align: center;
+}
+
+li.has-submenu{
+position: relative;
+}
+
+.submenu{
+position: absolute;
+opacity: 0;
+top:50px;
+left: 30px;
+visibility: hidden;
+pointer-events: none;
+list-style: none;
+z-index: 1;
+width: 100px;
+background-color: black;
+}
+
+li.has-submenu:hover .submenu{
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+border: 2px solid yellow;
+border-radius: 25px;
+}
+
+.submenu a{
+display: block;
+padding:10px;
+text-decoration: none;
+color: whitesmoke;
+transition: 0.5s;
+}
+
+.submenu a:hover{
+transform: translateX(10px);
+}
+
+.menu button{
+display: none;
+}
+
+.menu .close{
+display: none;
+}
+
+.menu span{
+display: none;
+}
+
+.sekcja1 img{
+    max-width: 70px;
+    max-height: 70px;
+    left: 20px;
+}
+
+
+
+
+@media(max-width:600px){
+.main-menu{
+display: none;
+}
+
+.menu{
+padding: 10px  0;
+}
+
+.container .menu {
+display: flex;
+justify-content: center;
+}
+
+.menu button{
+display: block;
+background-color: yellow;
+border: 2px solid black;
+padding: 10px 50px;
+color: black;
+font-size: 1.125rem;
+text-transform: uppercase;
+}
+
+.menu button:hover{
+    background-color: black;
+    padding: 10px 50px;
+    color: yellow;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    transition: 0.6s;
+    }
+
+.main-menu-mobile{
+/* display: block; */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+z-index: 999;
+background-color: yellow;
+padding-top: 100px;
+padding-left: 50px;
+}
+
+.show{
+display: block !important;
+}
+
+
+.menu .close{
+/* display: block; */
+position: fixed;
+top: 0;
+right: 0;
+z-index: 99999;
+font-size: 2.5rem;
+background-color: transparent;
+padding: 10px;
+}
+
+.main-menu > li > a:hover{
+    width: 50%;
+    }
+}
+
+.letsstart{
+    font-size: 1.2rem;
+    padding-top: 20px;
+    width: 80%;
+    align-self: center;
+}
+
+.letsstart h2{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.letsstart p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    text-align: start;
+    font-weight: 600;
+}
+
+.letsstart img{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ol1 a{
+    text-decoration: none;
+    color: darkorange;
+}
+
+.button1{
+    position: fixed;
+    margin-left: 10px;
+    background-color: orange;
+    border: 2px solid black;
+}
+
+.body{
+    padding-top: 20px;
+    width: 80%;
+    width: 80%;
+}
+
+.pierwsze{
+    display: flex;
+    width: 100%;
+}
+
+.pierwsze .jeden h2{
+    font-size: 2rem;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+}
+
+.pierwsze .jeden p{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pierwsze .jeden{
+    background-color: orange;
+    width: 50%;
+}
+
+.pierwsze .dwa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    width: 50%;
+}
+
+.pierwsze .dwa img{
+    width: 100%;
+}
+
+.pierwsze .dwa .dwadwa{
+    margin-top: 30px;
+}
+
+
+
+.drugie{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.drugie .jeden{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.drugie .jeden h2{
+    width: 100%;
+    border-bottom: 2px solid orange;
+    padding-top: 20px;
+    font-size: 1.9rem;
+}
+.drugie .jeden h2:hover{
+    transition: 0.6s;
+}
+
+.drugie .jeden p{
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+}
+
+.drugie .dwa h2{
+    max-height: 50px;
+    font-size: 1.6rem;
+    text-align: center;
+    border-bottom: 2px solid orange;
+    border-width: 60%;
+}
+
+.drugie .dwa p{
+    padding-bottom: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 1.3rem;
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+}
+
+.drugie .dwa img{
+    width: 95%;
+    margin-bottom: 20px;
+    height: 200px;
+}
+
+i{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.ol1 li a{
+    font-size: 1.3rem;
+}
+
+.ol1 li a:hover{
+    color: red;
+    font-weight: 900;
+}
+
+
+.drugie .dwa button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    background-color: white;
+}
+
+.drugie .dwa button:hover a{
+    background-color: darkorange;
+    color: white;
+    transition: 0.5s;
+}
+
+.drugie .dwa button a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: darkorange;
+    font-size: 0.8rem;
+    line-height: 40px;
+}
+
+.drugie .dwa .dwadwa{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drugie .dwaa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.drugie .dwaa h2{
+    text-align: center;
+}
+
+.drugie .dwaa p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.drugie .dwa .dwadwaa{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drugie .dwaa .dwatrzy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drugie .dwaa button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border: 2px solid darkorange;
+    width: 170px;
+}
+
+.drugie .dwaa button a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: darkorange;
+    width: 100%;
+    height: 100%;
+}
+.drugie .dwaa button:hover a{
+    color: whitesmoke;
+    background-color: darkorange;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+
+.drugie .dwa img{
+    width: 95%;
+    height: 100%;
+}
+
+.mama1{
+    flex-basis: 33%;
+}
+
+.mama2{
+    flex-basis: 33%;
+}
+
+.mama3{
+    flex-basis: 33%;
+}
+
+.drugie .dwa{
+    background-color: rgb(249, 207, 130);
+    border: 3px solid orange;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.drugie .dwaa{
+    background-color: rgb(249, 207, 130);
+    border: 3px solid orange;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.dwajeden{
+    height: 55%;
+}
+
+.dwadwa{
+    height: 30%;
+}
+
+.dwatrzy{
+    height: 5%;
+    margin-bottom: 20px;
+}
+
+
+
+
+@media(max-width: 1306px){
+    .pierwsze .jeden p{
+        font-size: 1.2rem;
+    }
+
+    .drugie .dwa p{
+        font-size: 1.15rem;
+    }
+
+    .drugie .dwa img{
+        width: 95%;
+        height: 95%;
+    }
+}
+
+@media(max-width: 980px){
+    .pierwsze .jeden p{
+        font-size: 1rem;
+    }
+
+    .drugie .dwa p{
+        font-size: 0.8rem;
+    }
+
+    .drugie .dwa{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+.drugie .dwa p{
+        padding: 0;
+        font-size: 1.4rem;
+        padding-bottom: 10px;
+    }
+    .drugie .dwa h2{
+        padding-top: 0;
+    }
+
+    .drugie .dwa img{
+        width: 50%;
+        height: 95%;
+    }
+
+
+}
+
+
+@media(max-width: 760px){
+    .body h2{
+        font-size: 1.5rem;
+    }
+    
+    .body p{
+        font-size: 1.1rem;
+    }  
+
+    .letsstart h2{
+        font-size: 1.5rem;
+    }
+
+    .letsstart p{
+        font-size: 0.9rem;
+    }
+
+    .pierwsze{
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .pierwsze .jeden{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .pierwsze .dwa{
+        width: 100%;
+    }
+
+    .drugie .jeden h2{
+        font-size: 1.6rem;
+    }
+    .drugie .jeden p{
+        font-size: 1.3rem;
+    }
+
+    .drugie .dwa button{
+        margin-bottom: 20px;
+    }
+
+    .drugie .dwa img{
+        width: 60%;
+        height: 80%;
+    }
+
+}
+
+@media(max-width: 600px){
+    .drugie .dwa p{
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .drugie .dwa img{
+        width: 70%;
+        height: 74%;
+    }
+}
+
+@media(max-width: 400px){
+    .drugie .dwa img{
+        width: 80%;
+        height: 60%;
+    }
+}
+
+.nagloweczek{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 3rem;
+    border: 2px solid orange;
+    width: 100%;
+}
+
+.nagloweczek:hover{
+    background-color: orange;
+    transition: 0.5s;
+}
+
+.nagloweczekK{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 3rem;
+    background-color: rgb(249, 207, 130);
+    border: 2px solid orange;
+    width: 60%;
+}
+
+.nagloweczekK:hover{
+    background-color: orange;
+    transition: 0.5s;
+}
+
+.footer{
+    height: 100px;
+    background-color: orange;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.aktualnosci{
+    width: 88%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.aktualnosci h2{
+    font-size: 3rem;
+    width: 100%;
+}
+
+.aktualnosci p{
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.dwadwaa{
+    max-width: 30%;
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cos{
+    width: 95%;
+}
+
+.nana{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: rgb(249, 207, 130);
+    border: 2px solid orange;
+}
+
+.nana label{
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.mamamama{
+    margin-top: 20px;
+    width: 60%;
+    height: 70px;
+    margin-bottom: 30px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.mamamama:hover{
+    margin-top: 20px;
+    width: 60%;
+    background-color: darkorange;
+    transition: 0.6s;
+}
+.nana input{
+    height: 50px;
+    width: 50%;
+}
+
+.nana input:hover{
+    transition: 0.6s;
+    background-color: grey;
+    border: 2px solid darkorange;
+    height: 51px;
+    width: 51%;
+}
+.aktualnoscii{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aktualnoscii h2{
+    font-size: 2rem;
+}
+
+.aktualnoscii p{
+    font-size: 1.3rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
