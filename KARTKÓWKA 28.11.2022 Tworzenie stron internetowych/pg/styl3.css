@@ -1,0 +1,75 @@
+*{
+    font-family: Tahoma, sans-serif;
+}
+
+.banner{
+    background-color: Tomato;
+    color: white;
+    padding: 10px;
+}
+
+.glowny{
+    background-color: Seashell;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.footer{
+    background-color: Tomato;
+    color: white;
+    width: 25%;
+    height: 160px;
+}
+
+.opinia{
+    background-color: white;
+    color:  DimGray;
+    width: 60%;
+    height: 200px;
+    margin: 40px auto 40px auto;
+    box-shadow:  5px 5px 10px dimgray;
+    display: flex;
+}
+
+img{
+    float: right;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+p{
+    padding: 10px;
+    font-size: 150%;
+    font-style: italic;
+}
+
+ h1{
+    text-align: center;
+ }
+
+ h2{
+    text-align: center;
+ }
+
+ h4{
+    text-align: right;
+    margin-right: 40px;
+    font-size: 150%;
+    font-style: italic;
+ }
+
+ a{
+    color: white;
+ }
+
+.glowny h4{
+    text-align: right;
+}
+
+.opinia div{
+    width: 100%;
+}
+
+.divv{
+    display: flex;
+}
